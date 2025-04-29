@@ -1,32 +1,32 @@
-# Image Recognition with HOG + Random Forest
+# Picture Recognition Program
 
-## Project overview
+## What Does This Program Do?
 
-This simple image recognition program can identify four types of images: cars, cats, dogs, and paintings. It uses basic machine learning techniques to analyze and classify images.
+This program can look at pictures and tell if they show cars, cats, dogs, or paintings. It uses simple artificial intelligence to figure out what's in each picture.
 
-The program is written in a file called **`iamge_recognition_ML.py`** (note: there's a typo in the filename). When tested, it can correctly identify images about 72% of the time.
+The program is saved in a file named **`iamge_recognition_ML.py`** (there's a spelling mistake in the name). When we tested it, it gets the right answer about 72% of the time.
 
-Main point: This basic approach works decently for small sets of images, but to get better results, you'd need more images or improved settings.
-
----
-
-## How it works
-
-| Step | Program part | What it does                                                                                                                                                 |
-| --- | --- |--------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **1 — Organizing images** | variable`data_set_path` | Images are stored in folders named 'car', 'cat', 'dog', and 'painting'                                                                                       |
-| **2 — Processing images** | loop over`categories` | · Loads each image <br/>· Converts colorful images to black and white <br/>· Makes all images the same size (128 × 64 pixels) <br/>· Analyzes image patterns |
-| **3 — Splitting data** | `StratifiedShuffleSplit` | Splits images into two groups: 55% for training and 45% for testing                                                                                          |
-| **4 — Learning** | `RandomForestClassifier` | Uses 100 decision trees to learn patterns in images                                                                                                          |
-| **5 — Testing** | `accuracy_score` | Shows how well it works (72% accuracy) and displays results with images                                                                                      |
+Quick summary: The program works okay with a small number of pictures, but it could do better if we gave it more pictures to learn from.
 
 ---
 
-## How to start
+## How Does It Work?
+
+| Step | Part of Program | What It Does                                                                                              |
+| --- | --- |-----------------------------------------------------------------------------------------------------------|
+| **1 — Setting Up Pictures** | folder system | Pictures are put into separate folders for cars, cats, dogs, and paintings                                |
+| **2 — Getting Pictures Ready** | picture processing | · Opens each picture <br/>· Makes them black and white <br/>· Makes all pictures the same size <br/>· Looks for patterns |
+| **3 — Dividing Pictures** | sorting system | Splits pictures into two groups: one for teaching the program (55%) and one for testing it (45%)          |
+| **4 — Learning** | AI learning system | Uses 100 different ways to learn what makes each type of picture unique                                   |
+| **5 — Checking Results** | testing system | Shows how well the program can identify pictures (gets 72% right)                                         |
+
+---
+
+## Getting Started
 
 ```
 # 1. Get the program files
-$ git clone https://github.com/SimasRIS/hog‑rf‑image‑recog.git
+$ git clone https://github.com/SimasRIS/image_recognition_ML.git
 $ cd image_recognition_ML
 
 # 2. (Optional) set up a separate environment
@@ -36,7 +36,7 @@ $ source venv/bin/activate   # Windows: venv\Scripts\activate
 # 3. Install needed software
 $ pip install -r requirements.txt
 
-# 4. Organize your images like this:
+# 4. Put your pictures in folders like this:
 img/
 ├── car/
 │   ├── car1.jpg
@@ -48,18 +48,17 @@ img/
 └── painting/
     └── …
 
-# 5. Run the program
+# 5. Start the program
 $ python iamge_recognition_ML.py
 ```
 
 ---
 
-## Understanding the 72% accuracy
+## About the 72% Success Rate
 
-| Question | Answer                                                                                                                                   |
-| --- |------------------------------------------------------------------------------------------------------------------------------------------|
-| **What does it mean?** | The program correctly identifies 72 out of every 100 images it tests.                                                                    |
-| **Why isn't it better?** | · Not enough example images <br/>· Some images look similar (like cats and dogs) <br/>· The program can't use color information          |
-| **How could we improve it?** | · Add more images <br/>· Try different program settings <br/>· Use more advanced AI technology Include color information in the analysis |
+| Question | Answer                                                                                                                                                |
+| --- |-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **What does 72% mean?** | Out of every 100 pictures, the program correctly identifies 72 of them.                                                                               |
+| **Why isn't it more accurate?** | · We don't have enough example pictures<br/>· Some pictures (like cats and dogs) can look very similar<br/>· The program only sees in black and white |
+| **How can we make it better?** | · Use more pictures for training <br/>· Adjust the program's settings <br/>· Use newer AI technology <br/>· Let the program use color information                    |
 
----
