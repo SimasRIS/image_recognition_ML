@@ -24,19 +24,30 @@ Quick summary: The program works okay with a small number of pictures, but it co
 
 ## Getting Started
 
+1. Get the program files
 ```
-# 1. Get the program files
 $ git clone https://github.com/SimasRIS/image_recognition_ML.git
+```
+```
 $ cd image_recognition_ML
-
-# 2. (Optional) set up a separate environment
+```
+2. (Optional) set up a separate environment
+```
 $ python -m venv venv
-$ source venv/bin/activate   # Windows: venv\Scripts\activate
-
-# 3. Install needed software
+```
+```
+$ source venv/bin/activate   
+```
+Windows: 
+```
+venv\Scripts\activate
+```
+3. Install needed software
+```
 $ pip install -r requirements.txt
-
-# 4. Put your pictures in folders like this:
+```
+4. Put your pictures in folders like this:
+```
 img/
 ├── car/
 │   ├── car1.jpg
@@ -47,8 +58,9 @@ img/
 │   └── …
 └── painting/
     └── …
-
-# 5. Start the program
+```
+5. Start the program
+```
 $ python iamge_recognition_ML.py
 ```
 
